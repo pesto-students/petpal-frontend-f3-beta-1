@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.carousel-item {
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  background-size: cover;
+}
+
+.my-nav {
+  z-index: 999;
+  width: 100%;
+  background-color: #0081fe;
+  color: white;
+}
+
+.my-nav-home {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  background-color: none;
+  color: white;
+}
+
+.pet-carousel {
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
+#root {
+  overflow: hidden;
+  min-height: 100vh; /* will cover the 100% of viewport */
+}
+
+.carousel-inner {
+  height: 70vh;
+}

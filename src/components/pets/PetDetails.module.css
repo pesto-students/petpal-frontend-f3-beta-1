@@ -1,0 +1,53 @@
+.details{
+    margin-right: 4em;
+    width: 85px;
+    height: 26px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.numberOfLikes{
+    width: 85px;
+    height: 26px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.detailsDivStyles{
+    margin-top: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+.aboutH1Styles{
+  margin-top: 2em;
+  margin-left: 0em;
+  margin-right: 10em;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.grid_container {
+    width: 79%;
+    margin: auto;
+  }
+  
+   .grid_container_h1_div{
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+  
+  .grid_container_h1 {
+    width: 63%;
+    margin: auto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    color: #000000;
+  }
+  

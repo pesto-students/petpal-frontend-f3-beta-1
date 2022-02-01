@@ -1,0 +1,80 @@
+.card {
+  left: 11.37%;
+  right: 64.67%;
+  top: 48.04%;
+  bottom: 38.73%;
+  mix-blend-mode: normal;
+  opacity: 0.9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 276px;
+  height: 374px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
+  opacity: 0.8;
+  background-color: black !important;
+  filter: grayscale(30%);
+}
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.card_title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32.0315px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  border-radius: 4.00393px;
+  margin-bottom: 3.5rem;
+  z-index: 1;
+  text-emphasis: center;
+  text-shadow: 1px 1px 0px;
+}
+
+.card_title_paragraph {
+  width: 223.82px;
+  height: 56.25px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 21px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  border-radius: 4.00393px;
+  z-index: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+/* Centered text */
+.card_title_centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  border-radius: 4.00393px;
+  margin-bottom: 3.5rem;
+  z-index: 1;
+}
