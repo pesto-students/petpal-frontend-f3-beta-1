@@ -35,7 +35,7 @@ function Navigation1({ handleLoginShow, handleSignUpShow, auth }) {
           title={state.name}
           id="basic-nav-dropdown"
         >
-          <NavDropdown.Item href="/myaccount">My Account</NavDropdown.Item>
+          <NavDropdown.Item onClick={()=> navigate("/myaccount")}>My Account</NavDropdown.Item>
           <NavDropdown.Item onClick={()=> navigate("/mypets")}>My Pet</NavDropdown.Item>
           <NavDropdown.Item onClick={()=> navigate("/addpet")} >Add Pet</NavDropdown.Item>
           <NavDropdown.Item onClick={()=> navigate(`/myrequests/${state._id}`)}>My Requests</NavDropdown.Item>
