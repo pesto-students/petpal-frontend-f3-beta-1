@@ -75,7 +75,7 @@ function PetDetails() {
       return <Button onClick={handleShowRequests}>{ displayResquest ? "Show About" : buttonText  }</Button>
     }
     else if(userExists(userState._id)){
-      return <Button>Request Sent</Button>
+      return <Button disabled>Request Sent</Button>
     }
     else{
       return <Button onClick={handleSendRequest}>Send Request</Button>      

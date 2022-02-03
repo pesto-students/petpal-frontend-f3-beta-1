@@ -1,14 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
-// <div className="footer">
-//   <footer className="py-5">
-//     {/* <div className="container">
-//       <p className="m-0 text-center text-black">
-//         Copyright &copy; PetPal 2021
-//       </p>
-//     </div> */}
-//   </footer>
-// </div>
+
 function Footer() {
   return (
     <>
@@ -17,7 +9,7 @@ function Footer() {
           <div className="row">
             <div className="col-12 col-lg-10 mx-auto">
               <div className="row">
-                <div className={`col-6 col-lg-4 ${styles.allign_footer}`}>
+                <div className={`col-6 col-lg-3 ${styles.allign_footer}`}>
                   <div className={styles.footer_subscribe_container_title}>
                     Information
                   </div>
@@ -27,7 +19,7 @@ function Footer() {
                     <li className={styles.li_style}>Support</li>
                   </ul>
                 </div>
-                <div className={`col-6 col-lg-4 ${styles.allign_footer}`}>
+                <div className={`col-6 col-lg-3 ${styles.allign_footer}`}>
                   <div className={styles.footer_subscribe_container_title}>
                     Company
                   </div>
@@ -38,7 +30,7 @@ function Footer() {
                   </ul>
                 </div>
 
-                <div className="col-6 col-lg-4">
+                <div className="col-6 col-lg-6">
                   <div className={styles.footer_subscribe_container}>
                     <div className={styles.footer_subscribe_container_title}>
                       Subscribe

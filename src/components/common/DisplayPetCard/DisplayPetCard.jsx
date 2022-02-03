@@ -62,7 +62,7 @@ function DisplayPetCard({
         </Button>
       );
     } else if (userExists(state._id)) {
-      return <Button>Request Sent</Button>;
+      return <Button disabled>Request Sent</Button>;
     } else {
       return <Button onClick={handleSendRequest}>Send Request</Button>;
     }

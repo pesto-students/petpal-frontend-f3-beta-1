@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import DisplayPetDetails from "./pets/DisplayPetDetails"
-import CorouselPics from "./shared/CarouselPics"
+// import CorouselPics from "./shared/CarouselPics"
 import { useDispatch } from "react-redux";
 import { loggedInUser } from "../store/slices/LoggedInUserDataSlice"
 
@@ -15,10 +15,10 @@ function About() {
   // eslint-disable-next-line
   },[])
 
-  return (<>
-    <CorouselPics />
+  return (<div style={{minHeight: "80vh"}}>
+    {/* <CorouselPics /> */}
     <DisplayPetDetails />    
-    </>
+    </div>
   );
 }
 

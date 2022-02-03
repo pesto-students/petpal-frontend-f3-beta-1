@@ -8,6 +8,14 @@ const loginCheck = () => {
   return http.get("/dashboard");
 };
 
+const updatePassword = (body) => {
+  return http.post("/updatepassword",body);
+};
+
+const updateLocation = (body) => {
+  return http.post("/updatelocation",body);
+};
+
 const login = (body) => {
   return http.post("/signin",body);
 };
@@ -81,6 +89,8 @@ const petDataService = {
   login,
   handleUnLike,
   sendRespond,
+  updatePassword,
+  updateLocation,
 };
 
 export default petDataService;

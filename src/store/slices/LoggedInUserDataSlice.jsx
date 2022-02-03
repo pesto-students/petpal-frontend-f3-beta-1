@@ -14,6 +14,18 @@ export const login = createAsyncThunk("/signin", async (body) => {
   return res.data;
 });
 
+export const updatePassword = createAsyncThunk("/updatepassword", async (body) => {
+  const res = await petDataService.updatePassword(body);
+  console.log(res);
+  return res.data;
+});
+
+export const updateLocation = createAsyncThunk("/updatelocation", async (body) => {
+  const res = await petDataService.updateLocation(body);
+  console.log(res);
+  return res.data;
+});
+
 const loggedInUserSlice = createSlice({
   name: "loggedInUser",
   initialState,
@@ -23,6 +35,12 @@ const loggedInUserSlice = createSlice({
       return action.payload;
     },
     [login.fulfilled]: (state, action) => {
+      return action.payload;
+    },
+    [updatePassword.fulfilled]: (state, action) => {
+      return action.payload;
+    },
+    [updateLocation.fulfilled]: (state, action) => {
       return action.payload;
     },
   },

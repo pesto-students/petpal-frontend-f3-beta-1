@@ -19,7 +19,6 @@ function Login({handleLoginClose, handleLoginSignUpToggle, setAuth}) {
 
   async function handleLogin(e) {
     e.preventDefault();
-
     const { email, password } = user;
 
     dispatch(login({email, password}))
@@ -73,7 +72,11 @@ function Login({handleLoginClose, handleLoginSignUpToggle, setAuth}) {
                 className="mb-3"
                 controlId="formBasicCheckbox"
               ></Form.Group>
-              <Button type="submit" variant="primary" onClick={handleLogin}>
+              <Button onKeyPress={(event)=>{
+                if(event.key === 'Enter'){
+                  handleLogin();
+                }
+              }} variant="primary" onClick={handleLogin}>
                 Login
               </Button>{" "}
               <Button variant="link" onClick={handleLoginSignUpToggle}>

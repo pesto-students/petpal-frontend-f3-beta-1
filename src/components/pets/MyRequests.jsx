@@ -13,23 +13,23 @@ function MyRequests() {
     };
 
     function DisplayRequestCards(){
-        return (<>
+        return (<div>
             {state ? state.myrequests.map(item => (
                 <DisplayPetRequestCard
                     userId={state._id}
                     petId={item.petId}
                 />
             )) : null}
-        </>)
+        </div>)
     }
 
     useEffect(() => {
         checkUser();
         // eslint-disable-next-line
     }, []);
-    return (<>
+    return (<div style={{minHeight: "80vh"}}>
         {DisplayRequestCards()}        
-    </>);
+    </div>);
 }
 
 export default MyRequests;

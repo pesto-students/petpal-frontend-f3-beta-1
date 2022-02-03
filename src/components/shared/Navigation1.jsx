@@ -18,7 +18,7 @@ function Navigation1({ handleLoginShow, handleSignUpShow, auth }) {
 
   useEffect(() => {
     //checkUser();
-    if (urlLocation.pathname === "/home" || urlLocation.pathname === "/" || urlLocation.pathname === "/mypets") {
+    if (urlLocation.pathname === "/home" || urlLocation.pathname === "/") {
       setStyleNavbar(true);
     } else {
       setStyleNavbar(false);
