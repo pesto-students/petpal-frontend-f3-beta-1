@@ -8,7 +8,7 @@ import { Card } from "react-bootstrap";
 
 function DisplayPetRequestCard({userId, petId}) {
   const [pet, setPet] = useState({})
-  const imageKey = pet.petimages ? pet.petimages[0].image : "";
+  const imageKey = pet.petimages ? "/images/" + pet.petimages[0].image : "";
   const [userFlag, setUserFlag] = useState(false)
   const [userData, setUserData] = useState({})
 
@@ -50,7 +50,7 @@ function DisplayPetRequestCard({userId, petId}) {
           <div className={styles.card_image}>
             <img
               className={styles.card_image}
-              src={"/images/" + imageKey}
+              src={imageKey}
               alt="pet"
               loading="lazy"
             />
