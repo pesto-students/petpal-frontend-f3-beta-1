@@ -26,6 +26,7 @@
 .card_details {
   /* margin: 1rem; */
   padding:1rem;
+  width: 100%;
 }
 
 .card_title

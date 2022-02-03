@@ -40,7 +40,7 @@ function Navigation1({ handleLoginShow, handleSignUpShow, auth }) {
           <NavDropdown.Item onClick={()=> navigate("/addpet")} >Add Pet</NavDropdown.Item>
           <NavDropdown.Item onClick={()=> navigate(`/myrequests/${state._id}`)}>My Requests</NavDropdown.Item>
           <NavDropdown.Divider />
-          <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>
+          <NavDropdown.Item onClick={()=> navigate("/userlogout")}>Logout</NavDropdown.Item>
         </NavDropdown>
         </>
       );

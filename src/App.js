@@ -54,7 +54,7 @@ function App() {
       <Route exact path="/" element={<Home />} />
       <Route path="/mypets" element={<MyPets />} />
       <Route path="/addpet" element={<AddPet />} />
-      <Route path="/logout" element={<Logout />} />
+      <Route path="/userlogout" element={<Logout />} />
       <Route path="/myaccount" element={<MyAccount />} />
       <Route path="/myrequests/:userId" element={<MyRequests />} />
       <Route path="/petindetail/:petId" element={<PetDetails />} />

@@ -30,7 +30,7 @@ function DisplayPetDetails() {
   console.log(petCategory);
 
   return (
-    <div>
+    <div style={{minHeight: "80vh"}}>
       {}
       {petCategory.map(pet =>{ return <DisplayPetCard
       key={pet._id}

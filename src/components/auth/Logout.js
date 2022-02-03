@@ -1,12 +1,11 @@
 import React,{ useEffect } from 'react'
 import {useNavigate} from 'react-router-dom'
 
-
 function Logout() {
     const navigate = useNavigate();
     const callLogoutPage = async () =>{
         try{
-            const res = await fetch("/userlogout",{
+            const res = await fetch("/logout",{
               method: "GET",
               headers: {
                 Accept: "application/json",
@@ -15,6 +14,7 @@ function Logout() {
               credentials: "include",
             });
             const data = await res.json();
+            console.log(data);
             if(data){
                 navigate('/home');
             }

@@ -28,12 +28,12 @@ function DisplayPetCard({
   const navigate = useNavigate();
 
   const handlePetClick = async () => {
-    window.alert("PetClicked " + _id);
+    // window.alert("PetClicked " + _id);
     dispatch(petInDetail(_id)).then((data) => navigate(`/petindetail/${_id}`));
   };
 
   const handleSendRequest = async () => {
-    window.alert("PetClicked " + _id);
+    // window.alert("PetClicked " + _id);
     dispatch(sendRequest({ _id, userId: state._id }))
       .then(() => {
         dispatch(petInDetail(_id)).then((data) =>
@@ -83,15 +83,20 @@ function DisplayPetCard({
           </div>
           <div className={styles.card_details}>
             <div className={styles.card_title}>
-              <span className={styles.card_title_name}>{petname.toUpperCase()}</span>
+              <span className={styles.card_title_name}>
+                {petname.toUpperCase()}
+              </span>
             </div>
             <div className={styles.card_paragraph}>
               <p>{aboutTrim}</p>
-              <span className={styles.card_title_breed}>{selectedPet}</span>              
+              <span className={styles.card_title_breed}>{selectedPet}</span>
             </div>
             <div className={styles.card_footer}>
               <span className={styles.card_footer_amount}>₹{adoptionFee}</span>
               <span className={styles.card_title_gender}>{gender}</span>
+              <span className={styles.card_footer_send_request}>
+                <Button onClick={handlePetClick}>Details</Button>
+              </span>
               <span className={styles.card_footer_send_request}>
                 <RequestButton />
               </span>
