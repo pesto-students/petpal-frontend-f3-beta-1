@@ -6,9 +6,15 @@
 
 ### Project Screen Shot(s)
  
-[ PRETEND SCREEN SHOT IS HERE ]
+[!PetPal Home page](https://drive.google.com/file/d/18Dj6HEh2wvMRsT8F7WcOTe0ZEBvoHs7R/view?usp=sharing)
 
-[ PRETEND OTHER SCREEN SHOT IS HERE ]
+[!Display Pets page](https://drive.google.com/file/d/10GEHFqmv1rRqEz7NqXA--PY8sS-QYC0x/view?usp=sharing)
+
+[!Pet Category](https://drive.google.com/file/d/155xLm8SGK6MMU826cDEmHvTwn6qGcPJL/view?usp=sharing)
+
+[!Testimonial section](https://drive.google.com/file/d/1bVr41HO18McJGAXw9s8BVbzFnpXq4Itx/view?usp=sharing)
+
+[!Footer section](https://drive.google.com/file/d/154TvuuxNi25XCI0Qm8gbXq52DFVIklPe/view?usp=sharing)
 
 ## Installation and Setup Instructions
 
