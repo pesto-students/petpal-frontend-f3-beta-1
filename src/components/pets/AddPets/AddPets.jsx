@@ -35,6 +35,12 @@ export default function AddPets() {
 
   const checkUser = async () => {
     dispatch(loggedInUser())
+    .then((data) => {
+      if(data.payload===""){
+        window.alert("Please, login first.")
+        navigate("/home")
+      }
+    })
     .catch(() =>navigate("/home"))
   };
 

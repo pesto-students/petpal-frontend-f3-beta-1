@@ -51,16 +51,14 @@ function PetDetails() {
     }); 
   }
 
+  function userExistsRequests(uid) {
+    return state.requests.some(function(el) {
+      return el.userId === uid;
+    }); 
+  }
+
   const handleSendRequest = async () => {
     dispatch(sendRequest({_id:state._id,userId:userState._id}))
-    // .then(() =>{
-    //   dispatch(petInDetail(_id))
-    //  .then(data =>navigate("/petindetail"))
-    // })
-    // .then(data => {
-    //   console.log(data)
-    //   navigate("/petindetail")
-    //   })
     .catch(err => console.log(err));
   }
 
@@ -74,7 +72,7 @@ function PetDetails() {
     if(state.userId===userState._id){
       return <Button onClick={handleShowRequests}>{ displayResquest ? "Show About" : buttonText  }</Button>
     }
-    else if(userExists(userState._id)){
+    else if(userExistsRequests(userState._id)){
       return <Button disabled>Request Sent</Button>
     }
     else{
@@ -127,7 +125,7 @@ function PetDetails() {
         <span className={styles.details}>{state.selectedPet}</span>
         <span className={styles.details}>{state.gender}</span>
         <span className={styles.details}>{state.size}</span>
-        <span className={styles.details}>Age {state.age}</span>
+        <span className={styles.details}>Age {state.age} yrs</span>
         {userExists(userState._id) ? <span onClick={handleUnLikeButton} className={styles.numberOfLikes}>💖</span> : <span onClick={handleLikeButton} className={styles.numberOfLikes}>💛<i class="far fa-heart"></i></span>}
         <span className={styles.numberOfLikes}>{state.likes.length}</span>
       </div>

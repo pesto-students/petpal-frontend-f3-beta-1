@@ -1,23 +1,31 @@
 import React,{ useEffect, useState } from "react";
 import { fetchAllPetDetails } from "../../store/slices/AddPetSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import DisplayPetCard from "../../components/common/DisplayPetCard/DisplayPetCard"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 
 function DisplayPetDetails() {
   const [pets,setPets] = useState([])
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const params = useParams();
+  const state = useSelector(state => state.loggedInUserDetails)
   console.log(params.category);
 
   const callPetDetailPage = async () => {
-    console.log("all pets details")
-    await dispatch(fetchAllPetDetails())
-    .then(data=>{
-      console.log(data.payload)
-      setPets(data.payload);
-    })
-    .catch(err=>console.log(err))
+    if(state){
+      console.log("all pets details")
+      await dispatch(fetchAllPetDetails())
+      .then(data=>{
+        console.log(data.payload)
+        setPets(data.payload);
+      })
+      .catch(err=>console.log(err))
+    }
+    else{
+      window.alert("To see pets information, please Login.")
+      navigate("/home")
+    }
   }
 
   useEffect(() =>{

@@ -9,7 +9,7 @@ function PopularCategoryCard({ category, url }) {
   const statecategory = state.filter(item => item.petcategory === category)
   return (
     <Col xs={12} md={4}>
-      <Link to={`/category/${category}`}>
+      <Link style={{textDecoration:"none"}} to={`/category/${category}`}>
         <div className={styles.popular_category_card}>
           <div className={styles.popular_category_card_content}>
             <img className={styles.popular_category_card_image} src={url} alt="" />
