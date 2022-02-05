@@ -4,25 +4,21 @@ import petDataService from "../../api/petDataServices";
 const initialState = [];
 export const loggedInUser = createAsyncThunk("/dashboard", async () => {
   const res = await petDataService.loginCheck();
-  console.log(res);
   return res.data;
 });
 
 export const login = createAsyncThunk("/signin", async (body) => {
   const res = await petDataService.login(body);
-  console.log(res);
   return res.data;
 });
 
 export const updatePassword = createAsyncThunk("/updatepassword", async (body) => {
   const res = await petDataService.updatePassword(body);
-  console.log(res);
   return res.data;
 });
 
 export const updateLocation = createAsyncThunk("/updatelocation", async (body) => {
   const res = await petDataService.updateLocation(body);
-  console.log(res);
   return res.data;
 });
 

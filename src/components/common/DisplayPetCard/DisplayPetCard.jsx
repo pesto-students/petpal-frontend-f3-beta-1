@@ -19,7 +19,6 @@ function DisplayPetCard({
   adoptionFee,
   gender,
 }) {
-  console.log(requests);
   const imageKey = petimages.length
     ? "/images/" + petimages[0].image
     : "https://i.stack.imgur.com/mwFzF.png";
@@ -40,10 +39,6 @@ function DisplayPetCard({
           navigate(`/petindetail/${_id}`)
         );
       })
-      // .then(data => {
-      //   console.log(data)
-      //   navigate("/petindetail")
-      //   })
       .catch((err) => console.log(err));
   };
 
@@ -54,7 +49,6 @@ function DisplayPetCard({
   }
 
   const RequestButton = () => {
-    console.log(userId, state._id);
     if (userId === state._id) {
       return (
         <Button>

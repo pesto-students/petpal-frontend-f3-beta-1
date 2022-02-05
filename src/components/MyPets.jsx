@@ -11,7 +11,6 @@ function About() {
   const state = useSelector(state => state.loggedInUserDetails)
 
   const checkUser = async () => {
-    console.log(state,"my pets");
     if(state){
       dispatch(loggedInUser())
       .then((data) =>{

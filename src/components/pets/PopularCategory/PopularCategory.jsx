@@ -9,7 +9,7 @@ function PopularCategory() {
     <PopularCategoryCard
       category = {item.name}
       url = {item.url}
-      key = { item }
+      key = { item.name }
     />
   ));
   return (

@@ -27,19 +27,7 @@ function Login({handleLoginClose, handleLoginSignUpToggle, setAuth}) {
       navigate('/home')
     })
 
-    // const res = await FetchLoginAuth(email, password);
-    // console.log(res, "res");
-    // const data = res;
-    // console.log(data);
-
-    // if (data.status === 200) {
-    //   handleLoginClose();
-    //   window.alert("Login done...");
-    //   setAuth(true)
-    //   navigate("/home");
-    // } else {
-    //   window.alert("Login failed");
-    // }
+    
   }
 
   return (

@@ -14,7 +14,6 @@ function Logout() {
               credentials: "include",
             });
             const data = await res.json();
-            console.log(data);
             if(data){
                 navigate('/home');
             }
@@ -23,7 +22,6 @@ function Logout() {
             }
           }    
           catch(e){
-            console.log(e);
             navigate('/home')
           }
         }

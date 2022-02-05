@@ -10,14 +10,11 @@ function DisplayPetDetails() {
   const navigate = useNavigate();
   const params = useParams();
   const state = useSelector(state => state.loggedInUserDetails)
-  console.log(params.category);
 
   const callPetDetailPage = async () => {
     if(state){
-      console.log("all pets details")
       await dispatch(fetchAllPetDetails())
       .then(data=>{
-        console.log(data.payload)
         setPets(data.payload);
       })
       .catch(err=>console.log(err))
@@ -29,13 +26,11 @@ function DisplayPetDetails() {
   }
 
   useEffect(() =>{
-    console.log("About page called");
     callPetDetailPage();
     return () => {};
     // eslint-disable-next-line
   },[]);
   const petCategory = pets.filter(data => data.petcategory === params.category)
-  console.log(petCategory);
 
   return (
     <div style={{minHeight: "80vh"}}>

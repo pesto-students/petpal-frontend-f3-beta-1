@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signUpUser } from "../store/slices/UserDetailSlice";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Button, Form } from "react-bootstrap";
 
 function SignUp({handleSignUpClose, handleLoginSignUpToggle}) {
@@ -22,7 +22,6 @@ function SignUp({handleSignUpClose, handleLoginSignUpToggle}) {
     setUser({ ...user, [name]: value });
   }
 
-  const userDetails = useSelector((state) => state.userSignUp);
 
   async function handlePost(e) {
     e.preventDefault();
@@ -33,19 +32,15 @@ function SignUp({handleSignUpClose, handleLoginSignUpToggle}) {
       );
 
       res.then((data) => {
-        console.log(data.payload, "signup.jsx");
         if (data.payload === 201) {
           window.alert("Registration Successful!!");
-          console.log(data, userDetails, "userDetails");
           handleSignUpClose();
         } else {
-          console.log(data, userDetails, "userDetails");
           window.alert("Registeration failed");
         }
         navigate("/home");
       });
     }
-    // console.log(data);
   }
 
   return (

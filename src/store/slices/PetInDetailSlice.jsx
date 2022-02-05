@@ -6,7 +6,6 @@ const initialState = [];
 export const petInDetail = createAsyncThunk(
   "/petindetail/",
   async (_id) => {
-    console.log(_id);  
     const res = await petDataService.petInDetail(_id);
     return res.data;
   }

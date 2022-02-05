@@ -85,7 +85,6 @@ function MyAccount() {
     })
   }
 
-  console.log(imageKey);
   return (
     <div
       style={{ margin:"5rem 5rem 3rem" }}

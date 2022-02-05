@@ -46,7 +46,6 @@ export default function AddPets() {
 
   async function postImage({ image, petId }) {
     const formData = new FormData();
-    console.log(petId);
     formData.append("image", image);
     formData.append("petId", petId);
     await axios.post("/images", formData, {
@@ -58,35 +57,29 @@ export default function AddPets() {
     event.preventDefault();
     const fl = event.target.files[0]; // get the file
     setFiles([...files, fl]); // set the file
-    // image thumbnail after upload
-    console.log(files, "filessssssssss");
-    // const result = await postImage({ image: file,description: "image sent" });
-    // setAddPet({ ...addPet, petimage: [result.Key, ...addPet.petimage] });
+
   };
   const handleImageUpload = async (petId) => {
     for (let i = 0; i < files.length; i++) {
-      console.log(files);
       await postImage({ image: files[i], petId: petId });
     }
   };
   const removeImage = (imageName) => {
-    console.log(imageName);
     const items = files.filter((image) => image.name !== imageName);
-    console.log(items);
     setFiles(items);
   };
   useEffect(() => {
     checkUser();
     let imageThumbnailName = files.map((image, index) => {
       return (
-        <div tabIndex={0} key={image.name} style={{ display: "flex" }}>
+        <div tabIndex={0} key={image.name} style={{  border: "1px solid black", display: "flex" }}>
           <li
-            style={{ border: "1px solid red", margin: "10px" }}
+            style={{ margin: "10px" }}
             key={image.name}
           >
             {image.name}
           </li>
-          <button onClick={() => removeImage(image.name)}>Button</button>
+          <button onClick={() => removeImage(image.name)}>❌</button>
         </div>
       );
     });
@@ -97,20 +90,18 @@ export default function AddPets() {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setAddPet({ ...addPet, [name]: value });
-    console.log(submitted, addPet);
   };
   const savePetDetail = async (event) => {
     event.preventDefault();
     setSubmitted(true);
-    console.log(addPet);
     dispatch(createPetDetails(addPet))
     .then(data =>{
-      console.log(data.payload.data._id);
       handleImageUpload(data.payload.data._id)
       .then(data =>{
         // navigate('/about')
       })
     })
+    setSubmitted(false);
   };
   return (
     <div>
@@ -208,7 +199,7 @@ export default function AddPets() {
           />
         </Form.Group>
         <Form.Group style={{marginTop: "2rem",textAlign: "center"}} controlId="adoptionFee">
-          <Button variant="primary" onClick={savePetDetail}>
+          <Button variant="primary" disabled={submitted} onClick={savePetDetail}>
             Submit
           </Button>
         </Form.Group>

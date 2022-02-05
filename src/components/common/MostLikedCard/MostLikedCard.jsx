@@ -9,7 +9,7 @@ function MostLikedCard({ mostLiked }) {
 
   return (
     <Col xs={12} md={4}>
-      <div class={styles.container}>
+      <div className={styles.container}>
         <img className={styles.card} src={"/images/" + imageKey} alt="pet" />
         <div>
           <div className={styles.card_title_centered}>

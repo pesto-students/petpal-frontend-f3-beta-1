@@ -13,7 +13,6 @@ function DisplayPetRequestCard({userId, petId}) {
   const [userData, setUserData] = useState({})
 
   async function FetchPetDetails(userId, petId) {
-    console.log(userId, petId);
     const res = await axios({
       method: "post",
       url: "/petindetails",
@@ -28,7 +27,6 @@ function DisplayPetRequestCard({userId, petId}) {
   useEffect(() => {
     FetchPetDetails(userId, petId)
     .then((data) => {
-      console.log(data.data);
       if(data.data.status){
         setPet(data.data.petDetails);
         setUserData(data.data.user)

@@ -24,7 +24,6 @@ function RespondCard({petId,userId,status}) {
 
   useEffect(() => {
     FetchNameLocation().then(data => {
-      console.log(data);
       setUserData(data.data[0]);
     })
     // eslint-disable-next-line

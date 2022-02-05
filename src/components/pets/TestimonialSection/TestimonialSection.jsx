@@ -7,7 +7,7 @@ import { Row } from "react-bootstrap";
 function TestimonialSection() {
  const testimonial = testimonialConstant["testimonialCard"].map(
    ({ name, url, desc }) => (
-     <TestimonialCard name={name} url={url} desc={desc} />
+     <TestimonialCard name={name} key={name} url={url} desc={desc} />
    )
  );
 

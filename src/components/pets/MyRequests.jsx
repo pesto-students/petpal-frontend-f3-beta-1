@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 function MyRequests() {
     // const dispatch = useDispatch();
     const state = useSelector(state=>state.loggedInUserDetails)
+    // eslint-disable-next-line
     const navigate = useNavigate();
 
     // const checkUser = async () => {
@@ -18,10 +19,10 @@ function MyRequests() {
 
     useEffect(() => {
         console.log(state);
-        if(state._id){
-            window.alert("Please, login first.")
-            navigate("/home")
-        }
+        // if(state){
+        //     window.alert("Please, login first.")
+        //     navigate("/home")
+        // }
     // eslint-disable-next-line
     },[])
 
@@ -29,6 +30,7 @@ function MyRequests() {
         return (<div>
             {state ? state.myrequests.map(item => (
                 <DisplayPetRequestCard
+                    key={state._id}
                     userId={state._id}
                     petId={item.petId}
                 />
