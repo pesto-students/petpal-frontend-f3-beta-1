@@ -55,7 +55,7 @@ function DisplayPetRequestCard({userId, petId}) {
           </div>
           <div className={styles.card_details}>
             <div className={styles.card_title}>
-              <span className={styles.card_title_name}>{pet.petname}</span>
+              <span className={styles.card_title_name}>{pet.petname.toUpperCase()}</span>
             </div>
             <div className={styles.card_paragraph}>
               <span>
