@@ -63,9 +63,9 @@ function Navigation1({ handleLoginShow, handleSignUpShow, auth }) {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand style={{cursor: "pointer"}} onClick={()=>{navigate("/home")}}>
+          <Navbar.Brand style={{cursor: "pointer"}} onClick={()=>{navigate("/")}}>
             <img
-              src="http://dogprintsgrooming.com/wp-content/uploads/2015/03/Dog_Print_Icons_3.png"
+              src="https://dogprintsgrooming.com/wp-content/uploads/2015/03/Dog_Print_Icons_3.png"
               width="30"
               height="30"
               className="d-inline-block align-top"

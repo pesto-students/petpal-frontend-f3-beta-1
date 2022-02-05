@@ -6,8 +6,7 @@ import { useSelector } from "react-redux";
 
 function MostLikedPets() {
   const state = useSelector((state) => state.petDetail);
-  let mostLikedState =   state.length ? [...state].sort(compare) : null;
-
+  let mostLikedState =   state ? [...state].sort(compare) : null;
   function compare(a, b) {
     const A = a.likes.length;
     const B = b.likes.length;
@@ -20,11 +19,11 @@ function MostLikedPets() {
       <div className={styles.grid_container_h1}>
         <h2>Most Liked Pets</h2>
       </div>
-      {state.length ? <Row className={styles.grid_container}>
+      {state && (<Row className={styles.grid_container}>
         <MostLikedCard mostLiked={mostLikedState[0] || "mostLiked"} />
         <MostLikedCard mostLiked={mostLikedState[1] || "mostLiked"} />
         <MostLikedCard mostLiked={mostLikedState[2] || "mostLiked"} />
-      </Row> : null }
+      </Row>)}
       
     </div>
   );

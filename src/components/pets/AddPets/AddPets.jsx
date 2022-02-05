@@ -99,7 +99,6 @@ export default function AddPets() {
       handleImageUpload(data.payload.data._id)
       .then(data =>{
         // navigate('/about')
-        console.log(initialAddPetState,addPet);
         setAddPet(initialAddPetState)
         setFiles([])
       })
