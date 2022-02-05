@@ -99,6 +99,9 @@ export default function AddPets() {
       handleImageUpload(data.payload.data._id)
       .then(data =>{
         // navigate('/about')
+        console.log(initialAddPetState,addPet);
+        setAddPet(initialAddPetState)
+        setFiles([])
       })
     })
     setSubmitted(false);
@@ -113,6 +116,7 @@ export default function AddPets() {
           <Form.Control
             type="text"
             name="petname"
+            value={addPet.petname}
             placeholder="Enter Pet Name"
             onChange={handleInputChange}
             required
@@ -123,6 +127,7 @@ export default function AddPets() {
           category={PetCategory}
           type="Pet Category"
           name="petcategory"
+          value={addPet.petcategory}
           onChange={handleInputChange}
         />
       </Row>
@@ -131,6 +136,7 @@ export default function AddPets() {
         <Form.Control
           type="file"
           name="petimage"
+          value={addPet.petimage}
           placeholder="Enter Pet Name"
           accept="image/*"
           onChange={handleImageChange}
@@ -145,6 +151,7 @@ export default function AddPets() {
           category={petList}
           type={addPet.petcategory}
           name="selectedPet"
+          value={addPet.selectedPet}
           onChange={handleInputChange}
           required
         />
@@ -153,6 +160,7 @@ export default function AddPets() {
           category={petgender}
           type="Gender"
           name="gender"
+          value={addPet.gender}
           onChange={handleInputChange}
         />
         <Form.Group as={Col} controlId="form age">
@@ -163,6 +171,7 @@ export default function AddPets() {
             name="age"
             placeholder="Age"
             required
+            value={addPet.age}
             min={0}
             max={20}
           />
@@ -172,6 +181,7 @@ export default function AddPets() {
           category={petsize}
           type="Size"
           name="size"
+          value={addPet.size}
           onChange={handleInputChange}
         />
       </Row>
@@ -181,6 +191,7 @@ export default function AddPets() {
           as="textarea"
           rows={6}
           name="about"
+          value={addPet.about}
           onChange={handleInputChange}
           required
         />
@@ -194,6 +205,7 @@ export default function AddPets() {
             placeholder="Adoption Fee"
             onChange={handleInputChange}
             required
+            value={addPet.adoptionFee}
             min={0}
             max={2000}
           />

@@ -67,7 +67,7 @@ function PetDetails() {
   }
 
   const RequestButton = () => {
-    const buttonText = `${state.requests.length} Request${state.requests.length>1 && "s"}`
+    const buttonText = `${state.requests.length} Request${state.requests.length>1 ? "s" : ""}`
     if(state.userId===userState._id){
       return <Button onClick={handleShowRequests}>{ displayResquest ? "Show About" : buttonText  }</Button>
     }

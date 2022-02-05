@@ -27,7 +27,7 @@ function DisplayPetDetails() {
 
   return (
     <>
-      {pets.length ? pets.map(pet => <DisplayPetCard {...pet}  />) : <div style={{textAlign:"center", marginTop:"5rem"}}><h1>No Pets to display</h1></div>}  
+      {pets.length ? pets.map(pet => <DisplayPetCard key={pet._id} {...pet}  />) : <div style={{textAlign:"center", marginTop:"5rem"}}><h1>No Pets to display</h1></div>}  
     </>
   );
 }
