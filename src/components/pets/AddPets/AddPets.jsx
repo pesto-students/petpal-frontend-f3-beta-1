@@ -72,14 +72,14 @@ export default function AddPets() {
     checkUser();
     let imageThumbnailName = files.map((image, index) => {
       return (
-        <div tabIndex={0} key={image.name} style={{  border: "1px solid black", display: "flex" }}>
+        <div tabIndex={0} key={image.name} style={{alignItems: "center", display: "flex" }}>
           <li
             style={{ margin: "10px" }}
             key={image.name}
           >
             {image.name}
           </li>
-          <button onClick={() => removeImage(image.name)}>❌</button>
+          <div onClick={() => removeImage(image.name)}>❌</div>
         </div>
       );
     });
