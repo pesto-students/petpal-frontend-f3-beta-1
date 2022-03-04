@@ -72,6 +72,8 @@ function MyAccount() {
         cPassword: "",
       });
       window.alert("Password updated successfully!!")
+    }).then(() => {
+      navigate("/")
     })
   }
 
@@ -82,6 +84,8 @@ function MyAccount() {
         loation: "",
       });
       window.alert("Location updated successfully!!")
+    }).then(() => {
+      navigate("/")
     })
   }
 

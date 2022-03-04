@@ -23,11 +23,13 @@ function Login({handleLoginClose, handleLoginSignUpToggle, setAuth}) {
 
     dispatch(login({email, password}))
     .then((data) => {
+      if(data.error){
+        window.alert("Invalid Credentials");
+      }
       handleLoginClose();
       navigate('/home')
-    })
-
-    
+      console.log(data);
+    })    
   }
 
   return (
