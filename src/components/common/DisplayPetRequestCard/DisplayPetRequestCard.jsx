@@ -7,7 +7,7 @@ import { Card } from "react-bootstrap";
 // import {loggedInUser} from "../../../store/slices/LoggedInUserDataSlice"
 
 function DisplayPetRequestCard({userId, petId}) {
-  const [pet, setPet] = useState({})
+  const [pet, setPet] = useState({petname:""})
   const imageKey = pet.petimages ? "/images/" + pet.petimages[0].image : "";
   const [userFlag, setUserFlag] = useState(false)
   const [userData, setUserData] = useState({})
@@ -25,6 +25,7 @@ function DisplayPetRequestCard({userId, petId}) {
   }
 
   useEffect(() => {
+    console.log('Dislay Pet Request card Called')
     FetchPetDetails(userId, petId)
     .then((data) => {
       if(data.data.status){
