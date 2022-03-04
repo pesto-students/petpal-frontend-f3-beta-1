@@ -46,3 +46,6 @@ Originally I wanted to build an application that allowed users to add pets , sel
 One of the main challenges We ran into was Authentication, Database design ,Aws image implementation and Add pets form. This lead me to spend a few days on a research spike. Due to project time constraints,
 
 At the end of the day, the technologies implemented in this project are React, React-Router, Redux-thunk-saga,react-bootstrap,JSX, and CSS. I chose to use the `create-react-app` boilerplate to minimize initial setup and invest more time in diving into weird technological rabbit holes. In the next iteration I plan on handrolling a `webpack.config.js` file to more fully understand the build process.
+
+## Note:
+Updating the profile picture of the user is Work in progress
