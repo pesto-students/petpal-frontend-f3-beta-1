@@ -1,51 +1,67 @@
-# PetPal:
-#### An application used to connect pet adopter to pet donner, built with React, Redux-thunk, JavaScript, and CSS.
 
-## Project Status:
-#### This project is currently in development. Users add Pets, filter pets by category . Responsive Functionality is in progress.
+# README
 
-### Project Screen Shot(s)
+# **PetPal**
+
+<p align="center">
+  <img src="https://dogprintsgrooming.com/wp-content/uploads/2015/03/Dog_Print_Icons_3.png" alt="petPal-logo"/>
+</p>
+
+Provide accessibility to high-quality adoptable pets. Increase the overall effectiveness of pet adoption programs across India to the extent that the euthanasia of adoptable pets is eliminated. Build an application that is easy to use and user-friendly. Connecting pet-owners with people who are looking to adopt pets. 
+
+## **Table of Contents**
+
+1.  [Demo](#project-demo)
+
+2.  [Installation](#installation)
+
+3.  [Technology Stack](#tech-stack)
+
+4.  [Authors](#authors)
+
+5.  [License](#license)
+
+## **Project Demo**
+
+<a href="petpalbackend.herokuapp.com/">
+    <p>Live Demo</p>
+ </a>
  
-[!PetPal Home page](https://drive.google.com/file/d/18Dj6HEh2wvMRsT8F7WcOTe0ZEBvoHs7R/view?usp=sharing)
+ Test Credentials:
+ - Username: pesto@pesto.tech
+ - Password: pesto123
 
-[!Display Pets page](https://drive.google.com/file/d/10GEHFqmv1rRqEz7NqXA--PY8sS-QYC0x/view?usp=sharing)
+## **Installation**
 
-[!Pet Category](https://drive.google.com/file/d/155xLm8SGK6MMU826cDEmHvTwn6qGcPJL/view?usp=sharing)
+To get a local copy up and running follow these simple steps.
 
-[!Testimonial section](https://drive.google.com/file/d/1bVr41HO18McJGAXw9s8BVbzFnpXq4Itx/view?usp=sharing)
+1.  Clone the repo
 
-[!Footer section](https://drive.google.com/file/d/154TvuuxNi25XCI0Qm8gbXq52DFVIklPe/view?usp=sharing)
+> git clone https://github.com/pesto-students/petpal-frontend-f3-beta-1.git
 
-## Installation and Setup Instructions
+2.  Install NPM packages
+> cd petpal-frontend-f3-beta-1 && npm install
 
+3. Run
+> npm start
 
-Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
+4.  Open http://localhost:3000 to view it in the browser
 
-Installation:
+### **Technology Stack**
 
-`npm install`  
+-   [React.js](https://reactjs.org/)
 
-To Run Test Suite:  
+-   [Redux](https://redux.js.org/)
 
-`npm test`  
+-   [Axios](https://axios-http.com/)
 
-To Start Server:
+## **Authors**
 
-`npm start`  
+-   Atul Kumbhar
 
-To Visit App:
+-   Shashank Tripathi
 
-`localhost:3000`  
-
-## Reflection
-
-This was a 8 week long project built during my Foundation batch-3 at Pesto Tech. Project goals followed development best practices such as PRD, UI/UX design, Development, Dev-Ops,Tech Stack (Express, React, HTML, CSS) and Project Artefacts (PRD,UX Wireframes,Engineering Design Sketch,Frontend,Backend)  
-
-Originally I wanted to build an application that allowed users to add pets , select pets based on category . I started this process by using the `create-react-app` boilerplate, then adding `react-redux @^7.2.6"` and `reduxjs/toolkit @^1.7.1`.  
-
-One of the main challenges We ran into was Authentication, Database design ,Aws image implementation and Add pets form. This lead me to spend a few days on a research spike. Due to project time constraints,
-
-At the end of the day, the technologies implemented in this project are React, React-Router, Redux-thunk-saga,react-bootstrap,JSX, and CSS. I chose to use the `create-react-app` boilerplate to minimize initial setup and invest more time in diving into weird technological rabbit holes. In the next iteration I plan on handrolling a `webpack.config.js` file to more fully understand the build process.
-
-## Note:
-Updating the profile picture of the user is Work in progress
+## **License**
+<a href='https://opensource.org/licenses/MIT'>
+  <p>MIT</p>
+</a>
